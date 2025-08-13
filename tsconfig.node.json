@@ -1,23 +1,16 @@
 // TSConfig file for Node.js envioronment used by Vite and ESLint
 {
-    "$schema": "https://json.schemastore.org/tsconfig",
-    "compilerOptions": {
-        "skipLibCheck": true,
-        "module": "ESNext",
-        "moduleResolution": "Bundler",
-        "allowSyntheticDefaultImports": true,
-        "strict": true,
-        "allowJs": false,
-        "checkJs": false,
-        "lib": [
-            "ESNext"
-        ],
-        "types": [
-            "node"
-        ]
-    },
-    "include": [
-        "vite.config.ts",
-        "eslint.config.mts",
-    ]
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "compilerOptions": {
+    "skipLibCheck": true,
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "allowJs": false,
+    "checkJs": false,
+    "lib": ["ESNext"],
+    "types": ["node"]
+  },
+  "include": ["vite.config.ts", "eslint.config.mts"]
 }
