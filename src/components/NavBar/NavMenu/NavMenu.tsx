@@ -1,10 +1,13 @@
 import clsx from 'clsx'
 import { NavMenuItem } from './NavBarMenuItem/NavBarMenuItem'
+import { Dispatch, SetStateAction } from 'react'
 
 export function NavMenu({
   showMenu,
+  setShowMenu,
 }: {
   showMenu: boolean
+  setShowMenu: Dispatch<SetStateAction<boolean>>
 }): React.ReactElement<HTMLDivElement> {
   return (
     <div
@@ -13,11 +16,13 @@ export function NavMenu({
         'transition-transform duration-300',
         showMenu ? 'translate-y-0' : '-translate-y-full',
       )}
+      onClick={() => setShowMenu(false)}
     >
-      <NavMenuItem text={'About'} />
-      <NavMenuItem text={'Products'} />
-      <NavMenuItem text={'Campaign'} />
-      <NavMenuItem text={'Contact'} />
+      <NavMenuItem text={'Home'} link={'/'} />
+      <NavMenuItem text={'About'} link={'/about'} />
+      <NavMenuItem text={'Products'} link={'/products'} />
+      <NavMenuItem text={'Campaign'} link={'/campaign'} />
+      <NavMenuItem text={'Contact'} link={'/contact'} />
     </div>
   )
 }
