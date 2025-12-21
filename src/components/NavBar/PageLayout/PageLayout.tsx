@@ -1,9 +1,9 @@
 import { motion } from 'framer-motion'
 export function PageLayout({
   children,
-}: {
+}: Readonly<{
   children: React.ReactNode
-}): React.ReactElement {
+}>): React.ReactElement {
   return (
     <motion.div
       initial={{ opacity: 0 }}

@@ -2,11 +2,11 @@ import { Dispatch, SetStateAction } from 'react'
 
 export function NavIcon({
   setShowMenu,
-}: {
+}: Readonly<{
   setShowMenu: Dispatch<SetStateAction<boolean>>
-}): React.ReactElement<HTMLDivElement> {
+}>): React.ReactElement<HTMLDivElement> {
   return (
-    <div
+    <button
       className={
         'aspect-square h-full bg-gray-700 transition-colors active:bg-gray-800'
       }
@@ -26,6 +26,6 @@ export function NavIcon({
           d={'M20 18H4m16-6H4M20 6H4'}
         />
       </svg>
-    </div>
+    </button>
   )
 }

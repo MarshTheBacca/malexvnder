@@ -3,10 +3,10 @@ import { Link } from 'react-router-dom'
 export function NavMenuItem({
   text,
   link,
-}: {
+}: Readonly<{
   text: string
   link: string
-}): React.ReactElement<HTMLDivElement> {
+}>): React.ReactElement<HTMLDivElement> {
   return (
     <Link to={link}>
       <div

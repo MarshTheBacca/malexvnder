@@ -4,5 +4,5 @@
  * @returns The sanitised string
  */
 export function sanitiseID(id: string): string {
-  return id.toLowerCase().replace(/\s+/g, '-')
+  return id.toLowerCase().replaceAll(/\s+/g, '-')
 }

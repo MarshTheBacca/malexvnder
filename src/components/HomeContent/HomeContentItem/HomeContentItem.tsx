@@ -6,12 +6,12 @@ export function HomeContentItem({
   text,
   bgColour,
   bgImage,
-}: {
+}: Readonly<{
   title: string
   text: string
   bgColour: string
   bgImage: string
-}): React.ReactElement<HTMLDivElement> {
+}>): React.ReactElement<HTMLDivElement> {
   return (
     <section
       id={sanitiseID(title)}
