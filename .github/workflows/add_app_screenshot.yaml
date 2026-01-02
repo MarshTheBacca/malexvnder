@@ -33,10 +33,11 @@ jobs:
           pip install shot-scraper
           shot-scraper install
           shot-scraper http://localhost:4173 \
-          -o preview.png \
-          --viewport 390 844 \
-          --wait 1000
-          --retina
+            -o preview.png \
+            -w 390 -h 844 \
+            --mobile \
+            --wait 1000
+            --retina
       - name: Commit and Push Screenshot
         # Only commit if the image actually changed to avoid infinite loops
         run: |
