@@ -8,7 +8,7 @@ import { ProductsContent } from '../ProductsContent/ProductsContent'
 export function RootComponent(): React.ReactElement<HTMLDivElement> {
   return (
     <div className={'v relative flex h-screen w-screen flex-col'}>
-      <BrowserRouter basename={'/malexvnder'}>
+      <BrowserRouter basename={'/'}>
         <NavBar />
         <div className={'relative flex-1 overflow-hidden'}>
           <AnimatePresence mode={'wait'}>
