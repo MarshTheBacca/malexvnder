@@ -1,23 +1,43 @@
-import { Dispatch, SetStateAction, useState } from 'react'
-import { NavMenu } from './NavMenu/NavMenu'
-import { NavIcon } from './NavMenu/NavIcon'
+import {
+  Link,
+  useLocation,
+  useNavigate,
+  Location,
+  NavigateFunction,
+} from 'react-router-dom'
 
 export function NavBar(): React.ReactElement<HTMLDivElement> {
-  const [showMenu, setShowMenu]: [boolean, Dispatch<SetStateAction<boolean>>] =
-    useState<boolean>(false)
+  const location: Location = useLocation()
+  const navigate: NavigateFunction = useNavigate()
+  const isHome: boolean = location.pathname === '/'
+
   return (
-    <>
-      <div className={'sticky z-3 flex h-10 items-center bg-gray-700'}>
-        <NavIcon setShowMenu={setShowMenu} />
-        <div
-          className={
-            'absolute left-1/2 flex h-full flex-grow -translate-x-1/2 bg-gray-700 text-2xl font-bold text-white'
-          }
-        >
-          malexvnder
-        </div>
+    <nav
+      className={
+        'sticky top-0 z-50 flex h-16 items-center justify-between bg-white px-4'
+      }
+    >
+      <div className={'flex w-24 justify-start'}>
+        {!isHome && (
+          <button
+            onClick={() => navigate(-1)}
+            className={
+              'cursor-pointer text-sm font-light tracking-widest uppercase transition-opacity hover:opacity-50'
+            }
+          >
+            ← Back
+          </button>
+        )}
       </div>
-      <NavMenu showMenu={showMenu} setShowMenu={setShowMenu} />
-    </>
+      <Link
+        to={'/'}
+        className={
+          'absolute left-1/2 -translate-x-1/2 font-bodoni text-3xl font-bold tracking-tighter text-black'
+        }
+      >
+        malexvnder
+      </Link>
+      <div className={'w-24'} />
+    </nav>
   )
 }
