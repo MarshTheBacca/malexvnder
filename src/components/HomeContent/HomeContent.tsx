@@ -1,32 +1,36 @@
 import { PageLayout } from '../NavBar/PageLayout/PageLayout'
 import { HomeContentItem } from './HomeContentItem/HomeContentItem'
+import homeImageSrc from '@/media/000016-3.jpg'
+import productsImageSrc from '@/media/MARCIELLA_16.JPG'
+import contactImageSrc from '@/media/000011-2.jpg'
+import campaignImageSrc from '@/media/000005.jpg'
 
 export function HomeContent(): React.ReactElement<HTMLDivElement> {
   return (
     <PageLayout>
       <HomeContentItem
         title={'About'}
-        text={'Max is awesome'}
+        text={'The Creative Vision'}
         bgColour={'bg-white'}
-        bgImage={'/image.png'}
+        bgImage={homeImageSrc}
       />
       <HomeContentItem
         title={'Products'}
-        text={"Max's potent products"}
+        text={'Current Work'}
         bgColour={'bg-yellow-200'}
-        bgImage={'/image.png'}
+        bgImage={productsImageSrc}
       />
       <HomeContentItem
         title={'Campaign'}
         text={'Campaign for Max'}
         bgColour={'bg-blue-200'}
-        bgImage={'/image.png'}
+        bgImage={campaignImageSrc}
       />
       <HomeContentItem
         title={'Contact'}
-        text={'Contact Max the great'}
+        text={'Inquiries & Collaborations'}
         bgColour={'bg-gray-300'}
-        bgImage={'/image.png'}
+        bgImage={contactImageSrc}
       />
     </PageLayout>
   )
