@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion'
+
 export function PageLayout({
   children,
 }: Readonly<{
@@ -10,7 +11,7 @@ export function PageLayout({
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.25 }}
-      className={'flex-grow flex-col items-center bg-gray-800 font-bold'}
+      className={'flex h-full w-full grow flex-col items-center'}
     >
       {children}
     </motion.div>

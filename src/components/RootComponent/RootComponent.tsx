@@ -6,15 +6,17 @@ import { AnimatePresence } from 'framer-motion'
 
 export function RootComponent(): React.ReactElement<HTMLDivElement> {
   return (
-    <div className={'relative min-h-screen w-screen bg-gray-400'}>
+    <div className={'v relative flex h-screen w-screen flex-col'}>
       <BrowserRouter basename={'/malexvnder'}>
         <NavBar />
-        <AnimatePresence mode='wait'>
-          <Routes>
-            <Route path='/' element={<HomeContent />} />
-            <Route path='/about' element={<AboutContent />} />
-          </Routes>
-        </AnimatePresence>
+        <div className={'relative flex-1 overflow-hidden'}>
+          <AnimatePresence mode={'wait'}>
+            <Routes>
+              <Route path={'/'} element={<HomeContent />} />
+              <Route path={'/about'} element={<AboutContent />} />
+            </Routes>
+          </AnimatePresence>
+        </div>
       </BrowserRouter>
     </div>
   )
