@@ -20,9 +20,7 @@ export function AboutContent(): React.ReactElement<HTMLDivElement> {
             'flex flex-1 flex-col justify-center bg-[#ebebeb] p-10 md:p-20'
           }
         >
-          <h1 className={'mb-8 font-bodoni text-5xl font-light text-black'}>
-            About
-          </h1>
+          <h1 className={'mb-8 font-bodoni text-5xl font-light'}>About</h1>
           <div
             className={
               'max-w-md space-y-6 text-lg leading-relaxed font-light text-gray-800'

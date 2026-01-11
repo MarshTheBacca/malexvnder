@@ -3,6 +3,7 @@ import { HomeContent } from '../HomeContent/HomeContent'
 import { NavBar } from '../NavBar/NavBar'
 import { AboutContent } from '../AboutContent/AboutContent'
 import { AnimatePresence } from 'framer-motion'
+import { ProductsContent } from '../ProductsContent/ProductsContent'
 
 export function RootComponent(): React.ReactElement<HTMLDivElement> {
   return (
@@ -14,6 +15,7 @@ export function RootComponent(): React.ReactElement<HTMLDivElement> {
             <Routes>
               <Route path={'/'} element={<HomeContent />} />
               <Route path={'/about'} element={<AboutContent />} />
+              <Route path={'/products'} element={<ProductsContent />} />
             </Routes>
           </AnimatePresence>
         </div>
